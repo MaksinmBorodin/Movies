@@ -21,7 +21,7 @@ const firstMenu: IMenu = {
 		{
 			icon: 'MdLocalFireDepartment',
 			link: '/trending',
-			title: 'Trending now',
+			title: 'Popular',
 		},
 	],
 }
