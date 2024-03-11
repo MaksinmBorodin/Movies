@@ -13,9 +13,9 @@ const UserList: FC = () => {
 	const { handleSearch, isLoading, searchTerm, data, deleteAsync } = useUsers()
 
 	return (
-		<Meta title="Users">
+		<Meta title="Пользователи">
 			<AdminNavigation />
-			<Heading title="Users" />
+			<Heading title="Пользователи" />
 			<AdminHeader handleSearch={handleSearch} searchTerm={searchTerm} />
 			<AdminTable
 				tableItems={data || []}

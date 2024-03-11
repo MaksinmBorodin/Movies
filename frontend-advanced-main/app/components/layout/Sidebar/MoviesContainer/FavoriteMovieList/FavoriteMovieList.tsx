@@ -24,7 +24,7 @@ const FavoriteMovieList: FC = () => {
 			list={{
 				link: '/favorites',
 				movies: favoritesMovies?.slice(0, 3) || [],
-				title: 'Favorites',
+				title: 'Любимое',
 			}}
 		/>
 	)

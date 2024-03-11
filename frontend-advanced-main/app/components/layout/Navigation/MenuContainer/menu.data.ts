@@ -1,33 +1,33 @@
 import { IMenu } from './menu.types'
 
 const firstMenu: IMenu = {
-	title: 'Menu',
+	title: 'Меню',
 	items: [
 		{
 			icon: 'MdHome',
 			link: '/',
-			title: 'Home',
+			title: 'Главная',
 		},
 		{
 			icon: 'MdExplore',
 			link: '/genres',
-			title: 'Discovery',
+			title: 'Все жанры',
 		},
 		{
 			icon: 'MdRefresh',
 			link: '/fresh',
-			title: 'Fresh movies',
+			title: 'Новинки',
 		},
 		{
 			icon: 'MdLocalFireDepartment',
 			link: '/trending',
-			title: 'Popular',
+			title: 'Популярные',
 		},
 	],
 }
 
 const userMenu: IMenu = {
-	title: 'General',
+	title: 'Основные',
 	items: [],
 }
 

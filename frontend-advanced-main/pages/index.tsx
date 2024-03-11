@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			url: getActorUrl(a.slug),
 			content: {
 				title: a.name,
-				subTitle: `+${a.countMovies} movies`,
+				subTitle: `+${a.countMovies} фильмов`,
 			},
 		}))
 

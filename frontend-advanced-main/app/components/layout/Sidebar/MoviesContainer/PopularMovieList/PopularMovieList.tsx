@@ -26,7 +26,7 @@ const PopularMovieList: FC = () => {
 			list={{
 				link: '/trending',
 				movies: popularMovies || [],
-				title: 'Popular Movies',
+				title: 'Популярные фильмы',
 			}}
 		/>
 	)

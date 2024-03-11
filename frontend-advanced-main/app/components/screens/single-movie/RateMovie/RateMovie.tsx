@@ -14,12 +14,12 @@ const RateMovie: FC<{ slug: string; _id: string }> = ({ slug, _id }) => {
 
 	return (
 		<div className={styles.wrapper}>
-			<h3>How do you like the movie?</h3>
-			<p>Ratings improve recommendations</p>
+			<h3>Как вам фильм?</h3>
+			<p>Рейтинги улучшают рекомендации</p>
 			{user ? (
 				<>
 					{isSended ? (
-						<div className={styles.thanks}>Thanks for rating!</div>
+						<div className={styles.thanks}>Спасибо за оценку!</div>
 					) : (
 						<StarRating
 							name="star-rating"

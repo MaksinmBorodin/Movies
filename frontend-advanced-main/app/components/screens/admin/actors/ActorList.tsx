@@ -20,9 +20,9 @@ const ActorList: FC = () => {
 	} = useActors()
 
 	return (
-		<Meta title="Actors">
+		<Meta title="Актеры">
 			<AdminNavigation />
-			<Heading title="Actors" />
+			<Heading title="Актеры" />
 			<AdminHeader
 				onClick={createAsync}
 				handleSearch={handleSearch}

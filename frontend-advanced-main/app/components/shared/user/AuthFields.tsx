@@ -20,10 +20,10 @@ const AuthFields: FC<IAuthFields> = ({
 		<>
 			<Field
 				{...register('email', {
-					required: 'Email is required!',
+					required: 'Введите email!',
 					pattern: {
 						value: validEmail,
-						message: 'Please enter a valid email',
+						message: 'Пожалуйста, введите email',
 					},
 				})}
 				placeholder="E-mail"
@@ -34,15 +34,15 @@ const AuthFields: FC<IAuthFields> = ({
 					'password',
 					isPasswordRequired
 						? {
-								required: 'Password is required!',
+								required: 'Введите пароль!',
 								minLength: {
 									value: 6,
-									message: 'Min length should more 6 symbols!',
+									message: 'Минимальное колтчество сиволов - 6!',
 								},
-						  }
+						}
 						: {}
 				)}
-				placeholder="Password"
+				placeholder="Пароль"
 				type="password"
 				error={errors.password}
 			/>

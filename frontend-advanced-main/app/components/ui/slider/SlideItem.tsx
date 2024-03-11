@@ -10,7 +10,7 @@ interface ISlideItem {
 	buttonTitle?: string
 }
 
-const SlideItem: FC<ISlideItem> = ({ slide, buttonTitle = 'Watch' }) => {
+const SlideItem: FC<ISlideItem> = ({ slide, buttonTitle = 'Смотреть' }) => {
 	const { push } = useRouter()
 
 	return (

@@ -14,7 +14,7 @@ const GenreMenu = () => {
 	) : (
 		<Menu
 			menu={{
-				title: 'Popular genres',
+				title: 'Популярные жанры',
 				items: data || [],
 			}}
 		/>

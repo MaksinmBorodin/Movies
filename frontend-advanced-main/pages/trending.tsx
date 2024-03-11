@@ -13,8 +13,8 @@ const TrendingPage: NextPage = () => {
 	return (
 		<Catalog
 			movies={popularMovies || []}
-			title="Trending movies"
-			description="Trending movies in excellent quality: legal, safe, without ads"
+			title="Популярные"
+			description="Трендовые фильмы в отличном качестве: легально, безопасно, без рекламы."
 		/>
 	)
 }

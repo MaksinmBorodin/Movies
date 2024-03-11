@@ -19,9 +19,9 @@ const GenreList: FC = () => {
 	} = useGenres()
 
 	return (
-		<Meta title="Genres">
+		<Meta title="Жанры">
 			<AdminNavigation />
-			<Heading title="Genres" />
+			<Heading title="Жанры" />
 			<AdminHeader
 				onClick={createAsync}
 				searchTerm={searchTerm}

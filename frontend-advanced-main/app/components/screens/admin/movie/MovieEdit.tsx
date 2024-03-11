@@ -41,9 +41,9 @@ const MovieEdit: FC = () => {
 	const { data: actors, isLoading: isActorsLoading } = useAdminActors()
 
 	return (
-		<Meta title="Edit movie">
+		<Meta title="Добавление фильма">
 			<AdminNavigation />
-			<Heading title="Edit movie" />
+			<Heading title="Добавление фильма" />
 			{isLoading ? (
 				<SkeletonLoader count={5} />
 			) : (
@@ -51,9 +51,9 @@ const MovieEdit: FC = () => {
 					<div className={formStyles.fields}>
 						<Field
 							{...register('title', {
-								required: 'Title is required!',
+								required: 'Введидете название!',
 							})}
-							placeholder="Title"
+							placeholder="Название"
 							error={errors.title}
 						/>
 						<SlugField
@@ -65,25 +65,25 @@ const MovieEdit: FC = () => {
 						/>
 						<Field
 							{...register('parameters.country', {
-								required: 'Country is required!',
+								required: 'Введидете страну!',
 							})}
-							placeholder="Country"
+							placeholder="Страна"
 							error={errors.parameters?.country}
 							style={{ width: '31%' }}
 						/>
 						<Field
 							{...register('parameters.duration', {
-								required: 'Duration is required!',
+								required: 'Введидете длительность фильма!',
 							})}
-							placeholder="Duration (min.)"
+							placeholder="Длительность (мин.)"
 							error={errors.parameters?.duration}
 							style={{ width: '31%' }}
 						/>
 						<Field
 							{...register('parameters.year', {
-								required: 'Year is required!',
+								required: 'Введидете год!',
 							})}
-							placeholder="Year"
+							placeholder="Год"
 							error={errors.parameters?.year}
 							style={{ width: '31%' }}
 						/>
@@ -92,13 +92,13 @@ const MovieEdit: FC = () => {
 							name="genres"
 							control={control}
 							rules={{
-								required: 'Please select at least one genre!',
+								required: 'Пожалуйста, выберите хотя бы один жанр!',
 							}}
 							render={({ field, fieldState: { error } }) => (
 								<DynamicSelect
 									error={error}
 									field={field}
-									placeholder="Genres"
+									placeholder="Жанры"
 									options={genres || []}
 									isLoading={isGenresLoading}
 									isMulti
@@ -109,13 +109,13 @@ const MovieEdit: FC = () => {
 							name="actors"
 							control={control}
 							rules={{
-								required: 'Please select at least one actor!',
+								required: 'Пожалуйста, выберите хотя бы одного актера!',
 							}}
 							render={({ field, fieldState: { error } }) => (
 								<DynamicSelect
 									error={error}
 									field={field}
-									placeholder="Actors"
+									placeholder="Актеры"
 									options={actors || []}
 									isLoading={isActorsLoading}
 									isMulti
@@ -132,7 +132,7 @@ const MovieEdit: FC = () => {
 								fieldState: { error },
 							}) => (
 								<UploadField
-									placeholder="Poster"
+									placeholder="Постер"
 									error={error}
 									folder="movies"
 									image={value}
@@ -140,7 +140,7 @@ const MovieEdit: FC = () => {
 								/>
 							)}
 							rules={{
-								required: 'Poster is required!',
+								required: 'Прикрепите постер!',
 							}}
 						/>
 
@@ -153,7 +153,7 @@ const MovieEdit: FC = () => {
 								fieldState: { error },
 							}) => (
 								<UploadField
-									placeholder="Big poster"
+									placeholder="Большой постер"
 									error={error}
 									folder="movies"
 									image={value}
@@ -161,7 +161,7 @@ const MovieEdit: FC = () => {
 								/>
 							)}
 							rules={{
-								required: 'Big poster is required!',
+								required: 'Прикрепите большой постер!',
 							}}
 						/>
 
@@ -174,7 +174,7 @@ const MovieEdit: FC = () => {
 								fieldState: { error },
 							}) => (
 								<UploadField
-									placeholder="Video"
+									placeholder="Видео"
 									error={error}
 									folder="movies"
 									image={value}
@@ -184,12 +184,12 @@ const MovieEdit: FC = () => {
 								/>
 							)}
 							rules={{
-								required: 'Video is required!',
+								required: 'Прикрепите видео!',
 							}}
 						/>
 					</div>
 
-					<Button>Update</Button>
+					<Button>Обновить</Button>
 				</form>
 			)}
 		</Meta>

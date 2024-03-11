@@ -43,11 +43,11 @@ export class AuthService {
 	}
 
 	async getNewTokens({ refreshToken }: RefreshTokenDto) {
-		if (!refreshToken) throw new UnauthorizedException('Please sign in!')
+		if (!refreshToken) throw new UnauthorizedException('Пожалуйста, войдите!')
 
 		const result = await this.jwtService.verifyAsync(refreshToken)
 
-		if (!result) throw new UnauthorizedException('Invalid token or expired!')
+		if (!result) throw new UnauthorizedException('Неверный токен или срок его действия истек!')
 
 		const user = await this.UserModel.findById(result._id)
 
@@ -65,10 +65,10 @@ export class AuthService {
 
 	async validateUser(email: string, password: string): Promise<UserModel> {
 		const user = await this.findByEmail(email)
-		if (!user) throw new UnauthorizedException('User not found')
+		if (!user) throw new UnauthorizedException('Пользователь не найден')
 
 		const isValidPassword = await compare(password, user.password)
-		if (!isValidPassword) throw new UnauthorizedException('Invalid password')
+		if (!isValidPassword) throw new UnauthorizedException('Неверный пароль')
 
 		return user
 	}

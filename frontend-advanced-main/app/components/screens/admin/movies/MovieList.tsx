@@ -19,9 +19,9 @@ const MovieList: FC = () => {
 	} = useMovies()
 
 	return (
-		<Meta title="Movies">
+		<Meta title="Фильмы">
 			<AdminNavigation />
-			<Heading title="Movies" />
+			<Heading title="Фильмы" />
 			<AdminHeader
 				onClick={createAsync}
 				handleSearch={handleSearch}

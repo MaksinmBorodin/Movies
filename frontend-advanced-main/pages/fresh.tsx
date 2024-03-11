@@ -10,8 +10,8 @@ const FreshPage: NextPage<{ movies: IMovie[] }> = ({ movies }) => {
 	return (
 		<Catalog
 			movies={movies || []}
-			title="Fresh movies"
-			description="New movies and series in excellent quality: legal, safe, without ads"
+			title="Новинки"
+			description="Новые фильмы и сериалы в отличном качестве: легально, безопасно, без рекламы."
 		/>
 	)
 }

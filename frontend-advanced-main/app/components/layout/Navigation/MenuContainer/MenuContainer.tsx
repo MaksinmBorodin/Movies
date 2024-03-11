@@ -13,7 +13,7 @@ const MenuContainer: FC = () => {
 		<div>
 			<Menu menu={menus[0]} />
 			<DynamicGenreMenu />
-			<Menu menu={{ title: 'General', items: [] }} />
+			<Menu menu={{ title: 'Основные', items: [] }} />
 		</div>
 	)
 }

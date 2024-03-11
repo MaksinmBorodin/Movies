@@ -12,23 +12,23 @@ import { IHome } from './home.types'
 const Home: FC<IHome> = ({ slides, trendingMovies, actors }) => {
 	return (
 		<Meta
-			title="Watch movies online"
-			description="Watch MovieApp movies and TV shows online or stream right to your browser."
+			title="Смотреть фильмы онлайн"
+			description="Смотрите фильмы онлайн прямо в браузере."
 		>
 			<Heading
-				title="Watch movies online"
+				title="Смотреть фильмы онлайн"
 				className="text-gray-500 mb-8 text-xl"
 			/>
 
 			{slides.length && <Slider slides={slides} />}
 
 			<div className="my-10">
-				<SubHeading title="Trending now" />
+				<SubHeading title="Сейчас в тренде" />
 				{trendingMovies.length && <Gallery items={trendingMovies} />}
 			</div>
 
 			<div>
-				<SubHeading title="Best actors" />
+				<SubHeading title="Лучшие актеры" />
 				{actors.length && <Gallery items={actors} />}
 			</div>
 		</Meta>
